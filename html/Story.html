@@ -1,0 +1,631 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>People of Hong Kong</title>
+
+    <!-- Link to Buefy CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/buefy/dist/buefy.min.css">
+
+    <!-- Link to Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Link to Local CSS-->
+    <link href="/css/story.css" rel="stylesheet">
+
+
+    <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-base.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-sunburst.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-data-adapter.min.js"></script>
+    
+
+</head>
+
+<body style="background-color: rgb(244, 244, 245)">
+
+    <!-- Bootstrap navbar -->
+    <nav class="navbar navbar-expand-sm navbar-light fixed-top"
+        style="background-color: rgb(232, 232, 255); border:rgb(114, 101, 145); border-width:2px; border-style:solid;">
+        <div class="container-fluid">
+            <a target="_blank" href="https://data.gov.hk/en-datasets/category/population" class="navbar-brand"><img
+                    src="/images/people.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav nav-fill w-100 me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link d-flex justify-content-start" aria-current="page" href="#">
+                            <h4></h4>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex justify-content-start" aria-current="page" href="#MeetTheTeam">
+                            <h4>Meet the team</h4>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex justify-content-start" aria-current="page" href="#Population">
+                            <h4>Hong Kong Population</h4>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex justify-content-start" aria-current="page" href="#Diversity">
+                            <h4>Diversity</h4>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex justify-content-start" href="#Charts">
+                            <h4>Charts</h4>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link d-flex justify-content-start dropdown-toggle" href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <h4>Findings</h4>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item d-flex justify-content-start" href="#Section4">
+                                    <h5>Finding 1</h5>
+                                </a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item d-flex justify-content-start" href="#Section5">
+                                    <h5>Finding 2</h5>
+                                </a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item d-flex justify-content-start" href="#Section6">
+                                    <h5>Finding 3</h5>
+                                </a></li>
+                                <li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Bootstrap section: Meet the Team -->
+    <div id="MeetTheTeam" style="padding: 120px 30px 30px 30px; background-color:rgb(237, 236, 238);">
+        <hr>
+        <div>
+            <h4 style="color:rgb(122, 122, 126)"><img src="/images/Team.png" alt="Team"
+                    style="width: auto; height: 100px">&nbsp;&nbsp;&nbsp;<strong style="color:midnightblue">Meet the
+                    team</strong></h4>
+        </div>
+        <br><br>
+
+        <div class="container sm-width:100%;">
+            <div class="row justify-content-center">
+                <div class="col-sm-4">
+                    <img class="zoom" src="/images/Andrea.jpg" alt="Andrea Levati"
+                        style="border: 2px solid rgb(114, 101, 145);">&nbsp;&nbsp;
+                    <img src="/images/Italy.png" alt="Italy-flag">
+                    <br><br><strong style="color:rgb(6, 153, 6)">Andrea LEVATI</strong>
+                </div>
+                <div class="col-sm-4">
+                    <img class="zoom" src="/images/Khem.png" alt="Khem Limbu" width="130" height="140"
+                        style="border: 2px solid rgb(114, 101, 145);">&nbsp;&nbsp;
+                    <img src="/images/Nepal.png" alt="Nepal-flag">
+                    <br><br><strong style="color:rgb(0,0,255)">Khem LIMBU</strong>
+                </div>
+                <div class="col-sm-4">
+                    <img class="zoom" src="/images/William.jpg" alt="William Cheung" 
+                        style="border: 2px solid rgb(114, 101, 145);">&nbsp;&nbsp;
+                    <img src="/images/Hongkong.png" alt="HongKong-flag">
+                    <br><br><strong style="color:rgb(255,0,0)">William CHEUNG</strong>
+                </div>
+            </div>
+            <br><br>
+            <p>
+            <h6>After successful collaboration on a project for COMP 7950 - IT Project Skills, Andrea, Khem and William
+                got back together to work on this.</p>
+                With Andrea originally from <a style="font-size:large; color:rgb(6, 153, 6)">Italy</a>, Khem
+                born in <a style="font-size:large; color:rgb(0, 0, 255)">Nepal</a> and William from <a
+                    style="font-size:large; color:rgb(255, 0, 0)">Hong Kong</a>, it seemed fitting that we look at Hong
+                Kong's multi-ethnicity.</h6>
+            </p>
+        </div>
+    </div>
+
+    <!-- Bootstrap section: Hong Kong population -->
+    <div id="Population" style="padding: 120px 30px 30px 30px; background-color: rgb(244, 244, 245)">
+        <hr>
+        <div>
+            <h4 style="color:rgb(122, 122, 126)"><img src="/images/society.png" alt="Society"
+                    style="width: auto; height: 100px">&nbsp;&nbsp;&nbsp;<strong style="color:midnightblue">Hong Kong
+                    population</strong></h4>
+        </div>
+        <br>
+        <div class="media"
+            style="color:rgb(19, 19, 19); border:rgb(19, 19, 19); border-style:solid; border-width: 1px; border-radius: 10px; padding:20px; background-color: rgb(255, 255, 255);">
+            <div class="media-body">
+                <p style="text-align: justify;">The Hong Kong Resident Population <strong>in 2016 was
+                        7,336,585</strong>. It had more
+                    than doubled during the past 55 years (from 3.17 million in 1961). After rapid growth in the 1960s
+                    and 1970s, the population rate of growth slowed down somewhat, to a yearly average of 0.7% for the
+                    period 2011-2016.</p>
+
+                <p style="text-align: justify;">According to the statistics released by the Census and Statistics Department in August this
+                    year, the provisional estimate of the <strong>Hong Kong population is 7,394,700 at
+                        mid-2021</strong>, representing an increase of 0.8% compared to 2016.</p>
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <!-- Chart.js: Hong Kong population over the last 60 years -->
+
+    
+
+    <div style="padding: 30px 30px 30px 30px; background-color: rgb(244, 244, 245)">
+        <h5 style="color:slategrey"><img src="/images/charts.png" alt="Charts"
+                style="width: auto; height: 100px; color: rgb(19,19,19)">&nbsp;&nbsp;&nbsp;<strong>Hong Kong population over the last 60 years</strong></h5>
+        
+        
+    </div>
+    <br>
+    <br>
+    <div style="padding: 30px 30px 30px 30px; background-color: rgb(244, 244, 245)">
+        <div class="media"
+            style="color:rgb(19, 19, 19); border:rgb(19, 19, 19); border-style:solid; border-width: 1px; border-radius: 10px; padding:20px; background-color: rgb(255, 255, 255);">
+            <div class="media-body">
+                <p style="text-align: justify;">The proportion of population born outside of Hong Kong has been
+                    increasing
+                    steadily. The number of <strong>people from mainland China, Macao or Taiwan was 2.27
+                        million</strong>, equivalent
+                    to 31%. People born elsewhere accounted for 0.61 million - i.e. 8.4% of Hong Kong's population, also
+                    due to the large number of foreign domestic helpers.</p>
+                <p>In fact, among the non-Chinese, the <strong>largest ethnic groups in Hong Kong were Filipinos and
+                        Indonesians</strong>, constituting 31.5% and 26.2% of the non-Chinese population respectively.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vue and Buefy bundle -->
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/buefy/dist/buefy.min.js"></script>
+
+    <div style="padding: 30px 30px 30px 30px; background-color: rgb(244, 244, 245)">
+        <h5 style="color:slategrey">Hong Kong population by ethnicity</h5>
+        <br>
+        <br>
+
+        <div class="container sm-width">
+            <div class="row">
+                <!-- Buefy table -->
+                <div id="app2" class="container col-sm-6"
+                    style="background-color: snow; border: 2px solid rgb(114, 101, 145); padding: 20px 20px 20px 20px">
+                    <section>
+                        <b-table :data="data">
+
+                            <template v-for="column in columns">
+
+                                <b-table-column :key="column.id" v-bind="column">
+
+                                    <template v-if="column.searchable && !column.numeric" #searchable="props">
+                                        <b-input v-model="props.filters[props.column.field]" placeholder="Search..."
+                                            icon="magnify" size="is-small" />
+                                    </template>
+
+                                    <template v-slot="props">
+                                        {{ props.row[column.field] }}
+                                    </template>
+
+                                </b-table-column>
+                            </template>
+
+                        </b-table>
+                    </section>
+                </div>&nbsp;&nbsp;&nbsp;
+
+                <div class="container col-sm-5">
+                <div id="chart4" style="width: 400px; height: 700px;"></div>
+
+                <script>
+                anychart.data.loadJsonFile("https://api.npoint.io/2e5c5e4a7f385e2b174f",
+        
+                    function (data) {
+
+                        // create a data tree from the dataset
+                        var dataTree = anychart.data.tree(data);
+
+                        // create a sunburst chart
+                        var chart = anychart.sunburst(dataTree);
+                        
+                        // set the calculation mode
+                        chart.calculationMode('parent-independent');
+        
+                        // set the ascending sort order
+                        chart.sort('asc');
+        
+                        // set the chart title
+                        chart.title("Population by ethnicity");
+        
+                        // set the chart container element id
+                        chart.container('chart4');
+        
+                        // initiate chart drawing
+                        chart.draw();
+
+                        // enable HTML in labels
+                        chart.labels().useHtml(true);
+
+                        // customize the format of the sunburst chart labels
+                        chart
+                        .level()
+                        .labels()
+                        .fontFamily("Verdana, sans-serif")
+                        .fontWeight(500)
+                        .format("<span style='font-size:16px'>{%name}</span><br><br><span style='font-size:16px'>{%value}{groupsSeparator:\\,}</span>");
+                        
+                        // enable HTML in tooltips
+                        chart.tooltip().useHtml(true);
+                        
+                        // customize the format of the sunburst chart tooltip
+                        chart
+                        .tooltip()
+                        .fontFamily("Verdana, sans-serif")
+                        .format("<h5 style='font-size:14px; margin: 0.25rem 0;'> {%name}</h5><h6 style='font-size:14px; font-weight:400; margin: 0.2rem 0;'>Population: <b>{%value}{groupsSeparator:\\,}</b></h6><h6 style='font-size:14px; font-weight:400; margin: 0.2rem 0;'></h6>");
+                        
+                    }
+                    )
+                    ;
+                </script> 
+     
+                
+            
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <!--  Buefy table - All ethnicity data-->
+            <div id="app5" class="container"
+                style="background-color: snow; border: 2px solid rgb(114, 101, 145); padding: 20px 20px 20px 20px">
+
+                <section>
+                    <b-field grouped group-multiline>
+                        <div class="control">
+                            <b-switch v-model="stickyHeaders">Sticky Headers</b-switch>
+                        </div>
+                        <!-- <div class="control">
+                    <b-switch v-model="dateSearchable">Date searchable</b-switch>
+                </div> -->
+                    </b-field>
+                    <b-table :data="data" :columns="columns" :sticky-header="stickyHeaders"></b-table>
+                </section>
+            </div>
+
+            <script>
+                const example5 = {
+                    data() {
+                        return {
+                            data: [],
+                            stickyHeaders: true,
+                        };
+
+                    },
+                    created() {
+                        fetch("https://api.npoint.io/44f0fa65985071acb132")
+                            .then(response => {
+                                return response.json();
+                            })
+                            .then((data) => this.data = data);
+                    },
+                    computed: {
+                        columns() {
+                            return [
+                                {
+                                    field: 'A',
+                                    label: 'Ethnicity',
+                                    width: '100',
+                                    numeric: false,
+                                    sticky: true,
+                                    searchable: true,
+                                    headerClass: "is-sticky-column-one",
+                                    cellClass: "is-sticky-column-one"
+                                },
+                                {
+                                    field: 'B',
+                                    label: 'Gender',
+                                    searchable: true,
+                                },
+                                {
+                                    field: 'C',
+                                    label: 'Age range',
+                                    searchable: true,
+                                },
+                                {
+                                    field: 'D',
+                                    label: 'Population',
+                                    searchable: true,
+                                },
+                                {
+                                    field: 'E',
+                                    label: 'Pop. excluding helpers',
+                                    searchable: true,
+                                },
+                                {
+                                    field: 'F',
+                                    label: 'Helpers',
+                                    searchable: true,
+
+                                }
+                            ];
+                        },
+
+                    }
+                };
+
+                const app5 = new Vue(example5)
+                app5.$mount('#app5')
+
+            </script>
+
+        </div>
+        <br>
+    </div>
+
+    <br>
+
+    <script>
+        const example2 = {
+            data() {
+                return {
+                    data: [],
+                    columns: [
+                        {
+                            field: 'A',
+                            label: 'Ethnicity',
+                            width: '100',
+                            numeric: false,
+                            searchable: true,
+                        },
+                        {
+                            field: 'B',
+                            label: 'Population',
+                            numeric: true,
+                            searchable: false,
+                            centered: false,
+                        }
+                    ]
+                }
+            },
+            created() {
+                fetch("https://api.npoint.io/2e5c5e4a7f385e2b174f")
+                    .then(response => { return response.json(); })
+                    .then(data => this.data = data);
+            }
+        };
+
+        const app2 = new Vue(example2)
+        app2.$mount('#app2')
+    </script>
+
+    <!-- Bootstrap section: Show photos -->
+    <div id="Diversity" style="padding: 120px 30px 30px 30px; background-color: rgb(255, 255, 255)">
+        <hr>
+        <h4 style="color:rgb(122, 122, 126)"><img src="/images/camera.png" alt="Camera"
+                style="width: auto; height: 100px">&nbsp;&nbsp;&nbsp;<strong
+                style="color:midnightblue">Diversity</strong>
+        </h4>
+    </div>
+
+    <div class="slideshow-container" style="background-color: rgb(255, 255, 255)">
+        <div class="mySlides">
+            <div class="numbertext">1 / 5</div>
+            <img src="/images/diversity1.jpeg" style="width:100%">
+            <div class="text"> </div>
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">2 / 5</div>
+            <img src="/images/diversity2.jpeg" style="width:100%">
+            <div class="text"></div>
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">3 / 5</div>
+            <img src="/images/diversity3.jpeg" style="width:100%">
+            <div class="text"></div>
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">4 / 5</div>
+            <img src="/images/diversity4.jpg" style="width:100%">
+            <div class="text"></div>
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">5 / 5</div>
+            <img src="/images/diversity5.jpg" style="width:100%">
+            <div class="text"></div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <div style="text-align:center; background-color: rgb(255, 255, 255)">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+    <!-- Javascript source for photos slider -->
+    <script src="/js/slider.js"></script>
+
+
+    <!-- Variables and values for chart 1 - to be replaced by Vue.js and JSON data later -->
+    <script>
+        var var1 = 1, var2 = 2, var3 = 3, var4 = 4, var5 = 5;
+    </script>
+    <!-- Javascript source for chart.js and chart 1 -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/js/myChart1.js"></script>
+
+    <!-- Variables and values for chart 2 - to be replaced by Vue.js and JSON data later -->
+    <script>
+        var var6 = 1, var7 = 2;
+    </script>
+    <!-- Javascript source for chart 2 -->
+    <script src="/js/myChart2.js"></script>
+
+
+    <!-- Variables and values for chart 3 - to be replaced by Vue.js and JSON data later -->
+    <script>
+        var var8 = 1, var9 = 2, var10 = 3, var11 = 4;
+    </script>
+
+    <!-- Javascript source for chart 3 -->
+    <script src="/js/HKPopulation.js"></script>
+
+
+    <!-- Bootstrap section: Interactive Charts-->
+    <section class="section" id="Charts" style="padding: 120px 30px 30px 30px; background-color: rgb(255, 255, 255)">
+        <hr>
+        <div>
+            <h4 style="color:rgb(122, 122, 126)"><img src="/images/charts.png" alt="Charts"
+                    style="width: auto; height: 100px">&nbsp;&nbsp;&nbsp;<strong
+                    style="color:midnightblue">Charts</strong>
+                </h4>
+        </div>
+        <br><br>
+
+        <div class=" is-vcentered">
+
+            <div class="row">
+
+                <!-- <div class="col chart-container" style="border: 2px solid rgb(114, 101, 145);"> -->
+                <div class="col align-items-center" style="border: 2px solid rgb(114, 101, 145);">
+                    <canvas id="myChart1" width="400"></canvas>
+                </div>
+
+                <div class="col align-items-center" style="border: 2px solid rgb(114, 101, 145);">
+                    <canvas id="myChart2" width="400"></canvas>
+                </div>
+
+                <div class="col align-items-center" style="border: 2px solid rgb(114, 101, 145);">
+                    <canvas id="myChart3" width="400"></canvas>
+                </div>
+                 
+            </div>
+
+        </div> 
+    </section>
+
+    <!-- Bootstrap section: Section 4. -->
+    <div id="Section4" style="padding: 120px 30px 30px 30px; background-color: rgb(244, 244, 245)">
+        
+        <hr>
+        <div>
+            <h4 style="color:rgb(122, 122, 126)"><img src="/images/smiley.png" alt="Team"
+                    style="width: auto; height: 100px">&nbsp;&nbsp;&nbsp;<strong style="color:midnightblue">
+                        Finding 1</strong>
+            </h4>
+        </div>
+        <br>
+        <br>
+        <div class="media"
+            style="color:rgb(19, 19, 19); border:rgb(19, 19, 19); border-style:solid; border-width: 1px; border-radius: 10px; padding:20px; background-color: rgb(255, 255, 255);">
+            <div class="media-body">
+                <h4>Majority of domestic helpers</h4>
+                <p style="text-align: justify;">
+                    From the latest data, the largest ethnic group in Hong Kong is the Filipinos, which is more than 184 thousand (32%). 
+                    The group of Indonesians is the secondmost part, which about 153 thousand (26%).
+                    The majority of the Filipinos(51%) and Indonesians(45%) work as domestic helpers for Hong Kong family, 
+                    providing housekeeping, cooking, childcare services. 
+                </p>
+            </div>
+    </div>
+            
+
+    <!-- Bootstrap section: Section 5. Placeholder for other content -->
+    <div id="Section5" style="padding: 120px 30px 30px 30px; background-color:rgb(237, 236, 238)">
+        <hr>
+        <div>
+            <h4 style="color:rgb(122, 122, 126)"><img src="/images/smiley.png" alt="Team"
+                    style="width: auto; height: 100px">&nbsp;&nbsp;&nbsp;<strong style="color:midnightblue">
+                        Finding 2</strong>
+            </h4>
+        </div>
+        <br><br>
+        <div class="media"
+            style="color:rgb(19, 19, 19); border:rgb(19, 19, 19); border-style:solid; border-width: 1px; border-radius: 10px; padding:20px; background-color: rgb(255, 255, 255);">
+            <div class="media-body">
+                <h4>Social demographics</h4>
+                <p style="text-align: justify;">The social demographics of the various ethnic minority groups 
+                    are quite interesting and reflect how different ethnic groups live in Hong Kong.</p>
+
+                <p style="text-align: justify;">Although the 2 most represented ethnic groups are Indonesians and Filipinos, 
+                most of them are here as Domestic Helpers. In fact, it would not be an understatement to say that almost all domestic helpers
+                are either Indonesian or Filipino.</p>
+
+                <p style="text-align: justify;">As a result, one does not usually notice the sheer amount of certain ethnic groups in Hong Kong.
+                For example, I had many Pakistani and Indian classmates during highschool and naturally thought that Indians and Pakistanis covered the bulk of 
+                ethnic minorities.</p>
+
+                <p style="text-align: justify;">Lastly, some ethnic groups are not included in the pie chart because most of the poeple in those groups 
+                are usually well educated and skilled. Therefore, they are most likely foreign workers for their comapnies. For example, most Japanese people
+                in Hong Kong are usually foreign workers for their Japanese companies.</p>
+                    </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap section: Finding 3 - Income  -->
+
+    <div id="Section6" style="padding: 120px 30px 30px 30px; background-color:rgb(237, 236, 238)">
+        <hr>
+        <div>
+            <h4 style="color:rgb(122, 122, 126)"><img src="/images/smiley.png" alt="Team"
+                    style="width: auto; height: 100px">&nbsp;&nbsp;&nbsp;<strong style="color:midnightblue">
+                        Finding 3</strong>
+            </h4>
+        </div>
+        <br><br>
+        <div class="media"
+            style="color:rgb(19, 19, 19); border:rgb(19, 19, 19); border-style:solid; border-width: 1px; border-radius: 10px; padding:20px; background-color: rgb(241, 241, 241);">
+            <div class="media-body">
+                <h4>Income</h4>
+                <p style="text-align: justify;">As we have seen, Hong Kong is indeed a culturally diverse society with people of many different
+                    ethnic backgrounds. They are all welcome here, however they appear to fare differently,
+                    as a thematic report published by the Census and Statistics Department of the Hong Kong Government
+                    in 2018 showed.</p>
+
+                <p style="text-align: justify;">White households earned the most among all ethnic minorities, with a median monhtly income of around
+                    HKD60,000. They were followed by Koreans, at HKD48,250 and Japanese at HKD40,000.</p>
+
+                <p style="text-align: justify;">The average household monthly income for all ethnic minorities was HKD32,500, which notably was
+                    higher than Hong Kong's overall figure, that stood at HKD25,000.</p>
+
+                <p style="text-align: justify;">In contrast, other Asian households earned less. The median monthly income for Indonesian households
+                    in 2016 was given as HKD9,250. In fact, in a separate report released by the
+                    Legislative Council that year, it was highlighted that South Asians accounted for almost 50% of
+                    those considered to be poor among ethnic minorities.</p>
+            </div>
+        </div>
+    </div>
+ 
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+        </script>
+
+
+
+</body>
+
+</html>

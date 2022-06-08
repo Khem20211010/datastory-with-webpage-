@@ -1,0 +1,108 @@
+/* Set fixed witdth for dropdown items, so they don't use default (page width) */
+.dropdown-menu {
+    min-width: 200px;
+    max-width: 200px;
+}
+
+* {
+    box-sizing: border-box
+}
+
+/* Settings for zooming when hovering over team photos */
+.zoom {
+    transition: transform .2s;
+    margin: 0 auto;
+}
+
+.zoom:hover {
+    transform: scale(1.2);
+}
+
+/* Settings for photos slider */
+.mySlides {
+    display: flexbox
+}
+
+img {
+    vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 750px;
+    position: relative;
+    margin: auto;
+}
+
+/* 'Next' and 'Previous' buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: rgb(2, 3, 66);
+    font-weight: bold;
+    font-size: 18px;
+    /* transition: 0.6s ease; */
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the 'Next' button to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a background color with a bit of see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(164, 163, 248, 0.8);
+}
+
+/* Format the caption text that shows on the photos */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Format the numbering that shows on photos (1/3, 2/3, etc.) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Format the dots below the photos */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #071c55;
+}
+
+html, body,#chart3 {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
